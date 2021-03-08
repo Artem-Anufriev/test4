@@ -8,9 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var checkLoginButton: UIButton!
+    @IBOutlet weak var checkLoginLabel: UILabel!
     var checkingLogin: CheckingLogin!
     
     @IBAction func checkLogin(_ sender: UIButton) {
@@ -29,12 +30,29 @@ class ViewController: UIViewController {
         ac.addAction(okAction)
         return ac
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        loginTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
-
-
+    
 }
 
+extension ViewController: UITextFieldDelegate {
+    
+    @objc private func textFieldChanged() {
+        if loginTextField.text?.isEmpty == false {
+            let loginText = loginTextField.text!
+            checkingLogin = CheckingLogin(withLogin: loginText)
+            if checkingLogin.isValid! {
+                checkLoginLabel.text = "this is a valid login"
+            } else {
+                checkLoginLabel.text = "this is an invalid login"
+            }
+        } else {
+            checkLoginLabel.text = ""
+        }
+    }
+    
+}

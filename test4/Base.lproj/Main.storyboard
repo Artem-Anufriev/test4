@@ -36,13 +36,22 @@
                                     <action selector="checkLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6GW-zu-0Cd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="........." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLF-2G-xb6">
+                                <rect key="frame" x="20" y="570" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="BLF-2G-xb6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="67C-9T-f9V"/>
                             <constraint firstItem="P4K-tf-rF1" firstAttribute="centerX" secondItem="H3S-9j-w2O" secondAttribute="centerX" id="7Dm-LD-70Y"/>
                             <constraint firstItem="etf-56-sb6" firstAttribute="top" secondItem="H3S-9j-w2O" secondAttribute="bottom" constant="42" id="A83-IO-oZe"/>
+                            <constraint firstItem="BLF-2G-xb6" firstAttribute="top" secondItem="etf-56-sb6" secondAttribute="bottom" constant="16" id="FKe-Cv-qaa"/>
                             <constraint firstItem="H3S-9j-w2O" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.903382" id="RJ0-x8-j8E"/>
+                            <constraint firstItem="BLF-2G-xb6" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.903382" id="Z9y-Wh-JrX"/>
                             <constraint firstItem="H3S-9j-w2O" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ZlT-Ic-bal"/>
                             <constraint firstItem="etf-56-sb6" firstAttribute="centerX" secondItem="H3S-9j-w2O" secondAttribute="centerX" id="pAg-HW-tYa"/>
                             <constraint firstItem="H3S-9j-w2O" firstAttribute="top" secondItem="P4K-tf-rF1" secondAttribute="bottom" constant="18" id="vwm-ho-ub4"/>
@@ -51,6 +60,7 @@
                     </view>
                     <connections>
                         <outlet property="checkLoginButton" destination="etf-56-sb6" id="CyP-PW-eEs"/>
+                        <outlet property="checkLoginLabel" destination="BLF-2G-xb6" id="Z9Q-nw-PvI"/>
                         <outlet property="loginTextField" destination="H3S-9j-w2O" id="fNF-bK-iV9"/>
                     </connections>
                 </viewController>

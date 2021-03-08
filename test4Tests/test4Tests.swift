@@ -10,7 +10,7 @@ import XCTest
 
 class test4Tests: XCTestCase {
     
-    var sutLogin: Login!
+    var sutLogin: CheckingLogin!
     var sutViewController: ViewController!
     
     override func setUpWithError() throws {
@@ -25,7 +25,7 @@ class test4Tests: XCTestCase {
 
     func testLoginInit() throws {
         let login = "info@yandex.ru"
-        sutLogin = Login(withLogin: login)
+        sutLogin = CheckingLogin(withLogin: login)
         XCTAssert(sutLogin.login == login, "Login.login must be equals login")
         XCTAssertNotNil(sutLogin.login, "sutLogin.login must be not nil")
         XCTAssertNotNil(sutLogin.isValid, "sutLogin.isValid must be not nil")
@@ -33,14 +33,14 @@ class test4Tests: XCTestCase {
     
     func testIfLoginValid() throws {
         let login = "info--yandex.ru22"
-        sutLogin = Login(withLogin: login)
+        sutLogin = CheckingLogin(withLogin: login)
         let isValid = sutLogin.isValid!
         XCTAssertTrue(isValid, "login \(login) must be valid")
     }
     
     func testIfLoginInvalid() throws {
         let login = "2info--yandex.ru22"
-        sutLogin = Login(withLogin: login)
+        sutLogin = CheckingLogin(withLogin: login)
         let isValid = sutLogin.isValid!
         XCTAssertFalse(isValid, "login \(login) must be invalid")
     }
