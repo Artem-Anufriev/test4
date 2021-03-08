@@ -11,12 +11,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var checkLoginButton: UIButton!
-    var login: Login!
+    var checkingLogin: CheckingLogin!
     
     @IBAction func checkLogin(_ sender: UIButton) {
         guard let loginText = loginTextField.text else { return }
-        login = Login(withLogin: loginText)
-        if let isValid = login.isValid {
+        checkingLogin = CheckingLogin(withLogin: loginText)
+        if let isValid = checkingLogin.isValid {
             let alertController = loginAlert(flag: isValid)
             self.present(alertController, animated: true, completion: nil)
         }

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Login {
+struct CheckingLogin {
     
-    let loginRegExp = "(?=^.{3,32}$)([A-Za-z][A-Za-z0-9\\.\\-]*@[A-Za-z0-9\\.\\-]+\\.[A-Za-z]{2,6}|[A-Za-z][A-Za-z0-9\\.\\-]+)"
-    var login: String?
-    var isValid: Bool?
+    private var loginRegExp = "(?=^.{3,32}$)([A-Za-z][A-Za-z0-9\\.\\-]*@[A-Za-z0-9\\.\\-]+\\.[A-Za-z]{2,6}|[A-Za-z][A-Za-z0-9\\.\\-]+)"
+    private var login: String?
+    public var isValid: Bool?
     
     func isValidLogin(login: String) -> Bool {
         return NSPredicate(format:"SELF MATCHES %@", loginRegExp).evaluate(with: login)
