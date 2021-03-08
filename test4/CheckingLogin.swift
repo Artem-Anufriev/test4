@@ -9,12 +9,12 @@ import Foundation
 
 struct CheckingLogin {
     
-    private var loginRegExp = "(?=^.{3,32}$)([A-Za-z][A-Za-z0-9\\.\\-]*@[A-Za-z0-9\\.\\-]+\\.[A-Za-z]{2,6}|[A-Za-z][A-Za-z0-9\\.\\-]+)"
+    private var loginRegExpression = "(?=^.{3,32}$)([A-Za-z][A-Za-z0-9\\.\\-]*@[A-Za-z0-9\\.\\-]+\\.[A-Za-z]{2,6}|[A-Za-z][A-Za-z0-9\\.\\-]+)"
     private var login: String?
     public var isValid: Bool?
     
     func isValidLogin(login: String) -> Bool {
-        return NSPredicate(format:"SELF MATCHES %@", loginRegExp).evaluate(with: login)
+        return NSPredicate(format:"SELF MATCHES %@", loginRegExpression).evaluate(with: login)
     }
     
     init(withLogin login : String) {

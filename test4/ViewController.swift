@@ -15,21 +15,21 @@ class ViewController: UIViewController {
     var checkingLogin: CheckingLogin!
     
     @IBAction func checkLogin(_ sender: UIButton) {
-        guard let loginText = loginTextField.text else { return }
-        checkingLogin = CheckingLogin(withLogin: loginText)
-        if let isValid = checkingLogin.isValid {
-            let alertController = loginAlert(flag: isValid)
-            self.present(alertController, animated: true, completion: nil)
-        }
+//        guard let loginText = loginTextField.text else { return }
+//        checkingLogin = CheckingLogin(withLogin: loginText)
+//        if let isValid = checkingLogin.isValid {
+//            let alertController = loginAlert(flag: isValid)
+//            self.present(alertController, animated: true, completion: nil)
+//        }
     }
     
-    func loginAlert(flag valid : Bool) -> UIAlertController {
-        let message = (valid ? "this is a valid login" : "this is an invalid login")
-        let ac = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
-        ac.addAction(okAction)
-        return ac
-    }
+//    func loginAlert(flag valid : Bool) -> UIAlertController {
+//        let message = (valid ? "this is a valid login" : "this is an invalid login")
+//        let ac = UIAlertController(title: "", message: message, preferredStyle: .alert)
+//        let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
+//        ac.addAction(okAction)
+//        return ac
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
