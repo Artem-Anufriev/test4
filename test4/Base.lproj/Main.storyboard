@@ -17,27 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter login..." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="H3S-9j-w2O">
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter login" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="H3S-9j-w2O">
                                 <rect key="frame" x="20" y="436" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter the correct login:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4K-tf-rF1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter your login:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4K-tf-rF1">
                                 <rect key="frame" x="107.66666666666667" y="394" width="198.66666666666663" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etf-56-sb6">
-                                <rect key="frame" x="143" y="512" width="128" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Check login"/>
-                                <connections>
-                                    <action selector="checkLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6GW-zu-0Cd"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="........." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLF-2G-xb6">
-                                <rect key="frame" x="20" y="570" width="374" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLF-2G-xb6">
+                                <rect key="frame" x="20" y="513" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,20 +38,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BLF-2G-xb6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="67C-9T-f9V"/>
-                            <constraint firstItem="P4K-tf-rF1" firstAttribute="centerX" secondItem="H3S-9j-w2O" secondAttribute="centerX" id="7Dm-LD-70Y"/>
-                            <constraint firstItem="etf-56-sb6" firstAttribute="top" secondItem="H3S-9j-w2O" secondAttribute="bottom" constant="42" id="A83-IO-oZe"/>
-                            <constraint firstItem="BLF-2G-xb6" firstAttribute="top" secondItem="etf-56-sb6" secondAttribute="bottom" constant="16" id="FKe-Cv-qaa"/>
-                            <constraint firstItem="H3S-9j-w2O" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.903382" id="RJ0-x8-j8E"/>
-                            <constraint firstItem="BLF-2G-xb6" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.903382" id="Z9y-Wh-JrX"/>
-                            <constraint firstItem="H3S-9j-w2O" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ZlT-Ic-bal"/>
-                            <constraint firstItem="etf-56-sb6" firstAttribute="centerX" secondItem="H3S-9j-w2O" secondAttribute="centerX" id="pAg-HW-tYa"/>
-                            <constraint firstItem="H3S-9j-w2O" firstAttribute="top" secondItem="P4K-tf-rF1" secondAttribute="bottom" constant="18" id="vwm-ho-ub4"/>
-                            <constraint firstItem="H3S-9j-w2O" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="y5v-bH-Kje"/>
+                            <constraint firstItem="BLF-2G-xb6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2fg-L0-1Hu"/>
+                            <constraint firstItem="BLF-2G-xb6" firstAttribute="top" secondItem="H3S-9j-w2O" secondAttribute="bottom" constant="43" id="4hV-dc-UeG"/>
+                            <constraint firstItem="H3S-9j-w2O" firstAttribute="top" secondItem="P4K-tf-rF1" secondAttribute="bottom" constant="18" id="4zh-2P-QGN"/>
+                            <constraint firstItem="H3S-9j-w2O" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="7hc-Cr-O9q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BLF-2G-xb6" secondAttribute="trailing" constant="20" id="CT7-pk-hxR"/>
+                            <constraint firstItem="P4K-tf-rF1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107.67" id="WKH-iG-VWt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P4K-tf-rF1" secondAttribute="trailing" constant="107.67" id="cwc-HP-zvC"/>
+                            <constraint firstItem="H3S-9j-w2O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dwl-c6-1hl"/>
+                            <constraint firstItem="H3S-9j-w2O" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lWf-cM-4qs"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="checkLoginButton" destination="etf-56-sb6" id="CyP-PW-eEs"/>
                         <outlet property="checkLoginLabel" destination="BLF-2G-xb6" id="Z9Q-nw-PvI"/>
                         <outlet property="loginTextField" destination="H3S-9j-w2O" id="fNF-bK-iV9"/>
                     </connections>

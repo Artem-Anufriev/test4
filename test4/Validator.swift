@@ -1,5 +1,5 @@
 //
-//  CheckingLogin.swift
+//  Validator.swift
 //  test4
 //
 //  Created by Artem on 11.02.2021.
@@ -7,10 +7,9 @@
 
 import Foundation
 
-struct CheckingLogin {
+struct Validator {
     
-    private var loginRegExpression = "(?=^.{3,32}$)([A-Za-z][A-Za-z0-9\\.\\-]*@[A-Za-z0-9\\.\\-]+\\.[A-Za-z]{2,6}|[A-Za-z][A-Za-z0-9\\.\\-]+)"
-    private var login: String?
+    private var loginRegExpression = "(?=^.{3,32}$)([A-Za-z][A-Za-z0-9\\.\\-]*@[A-Za-z0-9][A-Za-z0-9\\.\\-]*\\.[A-Za-z]{2,6}|[A-Za-z][A-Za-z0-9\\.\\-]+)"
     public var isValid: Bool?
     
     func isValidLogin(login: String) -> Bool {
@@ -18,7 +17,6 @@ struct CheckingLogin {
     }
     
     init(withLogin login : String) {
-        self.login = login
         self.isValid = isValidLogin(login: login)
     }
 }
