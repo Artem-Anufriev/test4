@@ -11,25 +11,25 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var checkLoginLabel: UILabel!
+    var model : Model?
+    var presenter : Presenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        self.model = Model()
+        self.presenter = Presenter(with: model!)
+    }
+    
+    @IBAction func checkLoginButton(_ sender: UIButton) {
+        guard let login = loginTextField.text else {
+            return
+        }
+        self.model = self.presenter?.checkLogin(with: login)
+        updateLoginLabel()
+    }
+    
+    private func updateLoginLabel() {
+        checkLoginLabel.text = self.model?.message
     }
 }
 
-extension ViewController: UITextFieldDelegate {
-    
-    @objc private func textFieldChanged() {
-        guard let loginText = loginTextField.text else { return }
-        let checkingLogin = Validator(withLogin: loginText)
-        if checkingLogin.isValid! {
-            checkLoginLabel.textColor = .blue
-            checkLoginLabel.text = "this is a valid login"
-        } else {
-            checkLoginLabel.textColor = .red
-            checkLoginLabel.text = "this is an invalid login"
-        }
-    }
-    
-}
